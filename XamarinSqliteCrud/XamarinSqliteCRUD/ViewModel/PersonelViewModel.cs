@@ -2,6 +2,8 @@
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
+using System.Windows.Input;
+using Xamarin.Forms;
 using XamarinSqliteCRUD.Model;
 using XamarinSqliteCRUD.Model.Entity;
 
@@ -9,7 +11,6 @@ namespace XamarinSqliteCRUD.ViewModel
 {
     public class PersonelViewModel : INotifyPropertyChanged
     {
-        public IUnitOfWork UnitOfWork;
         public string Personelname;
         public PersonelViewModel(IUnitOfWork unitOfWork)
         {
@@ -19,12 +20,41 @@ namespace XamarinSqliteCRUD.ViewModel
         public event PropertyChangedEventHandler PropertyChanged;
         public void OnModelChanged([CallerMemberName] string property = null)
         {
-            PropertyChanged?.Invoke(this,new PropertyChangedEventArgs(property));
+            PropertyChangedEventHandler handler = PropertyChanged;
+            if (handler != null)
+            {
+                handler(this, new PropertyChangedEventArgs(property));
+            }
         }
-        public List<Department> DepartmentLists { get; set; }
-        public Task<List<Department>> Departments()
+        Department selectedPersonel;
+        public Department Selectedpersonel
         {
-            return Task.Run(()=> personelRepository.GetDepartmentsListAsync()) ;
+            get { return selectedPersonel; }
+            set
+            {
+                if (selectedPersonel != value)
+                {
+                    selectedPersonel = value;
+                    OnModelChanged();
+                }
+            }
         }
+        // TODO ADD Kısmı button çalışmıyor 
+        public ICommand AddCommand
+        {
+            get
+            {
+                return new Command(async () =>
+                {
+                    var personel = new Personel()
+                    {
+                        PersonelName = Personelname,
+                        DepartmentId = Selectedpersonel.Id
+                    };
+                    await personelRepository.AddPersonelAsync(personel);
+                });
+            }
+        }
+        public IList<Department> DepartmentList { get { return personelRepository.GetDepartmentsListAsync(); } }
     }
 }

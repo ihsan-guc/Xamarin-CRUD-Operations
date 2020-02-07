@@ -2,8 +2,9 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Name="Personelview"
-             xmlns:viewmodels="clr-namespace:XamarinSqliteCRUD.ViewModel;assembly=XamarinSqliteCRUD"
-             x:Class="XamarinSqliteCRUD.View.PersonelView" Title="Personel">
+             xmlns:viewModels="clr-namespace:XamarinSqliteCRUD.ViewModel;assembly=XamarinSqliteCRUD" 
+             Title="Personel"
+    x:Class="XamarinSqliteCRUD.View.PersonelView">
     <ContentPage.Resources>
         <ResourceDictionary>
             <Style TargetType="Entry">
@@ -19,9 +20,18 @@
     </ContentPage.Resources>
     <ContentPage.Content>
         <StackLayout Orientation="Vertical" Spacing="20" Padding="20">
-            <Picker ItemsSource="{Binding DepartmentListDrop}" Title="DepartmentName" TitleColor="Red"></Picker>
+            <Picker ItemsSource="{Binding DepartmentList}" 
+                    ItemDisplayBinding="{Binding Name}"
+                    SelectedItem="{Binding Selectedpersonel}"
+                    Title="Departman Ismi" TitleColor="Red"></Picker>
             <Entry Text="{Binding Personelname}" Placeholder="Personel Name"></Entry>
-            <Button Text="Add" TextColor="White" BackgroundColor="Black"></Button>
+            <Label Text="{Binding Selectedpersonel.Name}" 
+                   HorizontalOptions="Center" />
+            <Button Text="Add Product"
+                TextColor="White"
+                BackgroundColor="DodgerBlue"
+                Command="{Binding Path = BindingContext.AddCommand
+                                    ,Source={x:Reference Personelview}}"></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

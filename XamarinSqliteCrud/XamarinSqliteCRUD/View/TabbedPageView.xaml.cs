@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using XamarinSqliteCRUD.Model;
 using XamarinSqliteCRUD.ViewModel;
@@ -17,7 +11,7 @@ namespace XamarinSqliteCRUD.View
         public TabbedPageView(IUnitOfWork unitOfWork)
         {
             Children.Add(new DepartmentView() {BindingContext = new DepartmentViewModel(unitOfWork)});
-            Children.Add(new PersonelView());
+            Children.Add(new PersonelView() { BindingContext = new PersonelViewModel(unitOfWork) });
         }
     }
 }

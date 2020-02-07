@@ -17,7 +17,7 @@ namespace SqliteOrnek2.DAL
         {
             LoginRepository = loginRepository;
             DepartmentRepository = departmentRepository;
-            personelRepository = PersonelRepository;
+            PersonelRepository = personelRepository;
             context = new DatabaseContext(dbPath);
         }
         public void Dispose()

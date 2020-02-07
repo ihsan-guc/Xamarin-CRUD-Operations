@@ -10,6 +10,6 @@ namespace XamarinSqliteCRUD.Model
         Task<bool> AddPersonelAsync(Personel personel);
         Task<bool> DeletePersonelAsync(int id);
         Task<bool> UpdatePersonelAsync(Personel personel);
-        Task<List<Department>> GetDepartmentsListAsync();
+        List<Department> GetDepartmentsListAsync();
     }
 }

@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using XamarinSqliteCRUD.Model;
 using XamarinSqliteCRUD.Model.Entity;
@@ -44,11 +45,11 @@ namespace SqliteOrnek2.DAL.Repository
             }
         }
 
-        public Task<List<Department>> GetDepartmentsListAsync()
+        public List<Department> GetDepartmentsListAsync()
         {
             try
             {
-                var list = context.Departments.ToListAsync();
+                var list = context.Departments.ToList();
                 return list;
             }
             catch (Exception ex)
