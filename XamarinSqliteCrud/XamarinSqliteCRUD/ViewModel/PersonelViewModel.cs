@@ -21,7 +21,7 @@ namespace XamarinSqliteCRUD.ViewModel
         {
             PropertyChanged?.Invoke(this,new PropertyChangedEventArgs(property));
         }
-        public List<Department> DepartmentListss { get; set; }
+        public List<Department> DepartmentLists { get; set; }
         public Task<List<Department>> Departments()
         {
             return Task.Run(()=> personelRepository.GetDepartmentsListAsync()) ;
