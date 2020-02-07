@@ -1,0 +1,15 @@
+C:\Users\EysanGuc\source\repos\XamarinSqliteCrud\XamarinSqliteCRUD\XamarinSqliteCRUD\bin\Debug\netstandard2.0\XamarinSqliteCRUD.deps.json
+C:\Users\EysanGuc\source\repos\XamarinSqliteCrud\XamarinSqliteCRUD\XamarinSqliteCRUD\bin\Debug\netstandard2.0\XamarinSqliteCRUD.dll
+C:\Users\EysanGuc\source\repos\XamarinSqliteCrud\XamarinSqliteCRUD\XamarinSqliteCRUD\obj\Debug\netstandard2.0\XamarinSqliteCRUD.csprojAssemblyReference.cache
+C:\Users\EysanGuc\source\repos\XamarinSqliteCrud\XamarinSqliteCRUD\XamarinSqliteCRUD\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\EysanGuc\source\repos\XamarinSqliteCrud\XamarinSqliteCRUD\XamarinSqliteCRUD\obj\Debug\netstandard2.0\XamarinSqliteCRUD.AssemblyInfoInputs.cache
+C:\Users\EysanGuc\source\repos\XamarinSqliteCrud\XamarinSqliteCRUD\XamarinSqliteCRUD\obj\Debug\netstandard2.0\XamarinSqliteCRUD.AssemblyInfo.cs
+C:\Users\EysanGuc\source\repos\XamarinSqliteCrud\XamarinSqliteCRUD\XamarinSqliteCRUD\bin\Debug\netstandard2.0\ref\XamarinSqliteCRUD.dll
+C:\Users\EysanGuc\source\repos\XamarinSqliteCrud\XamarinSqliteCRUD\XamarinSqliteCRUD\bin\Debug\netstandard2.0\XamarinSqliteCRUD.pdb
+C:\Users\EysanGuc\source\repos\XamarinSqliteCrud\XamarinSqliteCRUD\XamarinSqliteCRUD\obj\Debug\netstandard2.0\XamarinSqliteCRUD.dll
+C:\Users\EysanGuc\source\repos\XamarinSqliteCrud\XamarinSqliteCRUD\XamarinSqliteCRUD\obj\Debug\netstandard2.0\ref\XamarinSqliteCRUD.dll
+C:\Users\EysanGuc\source\repos\XamarinSqliteCrud\XamarinSqliteCRUD\XamarinSqliteCRUD\obj\Debug\netstandard2.0\XamarinSqliteCRUD.pdb
+C:\Users\EysanGuc\source\repos\XamarinSqliteCrud\XamarinSqliteCRUD\XamarinSqliteCRUD\obj\Debug\netstandard2.0\DepartmentView.xaml.g.cs
+C:\Users\EysanGuc\source\repos\XamarinSqliteCrud\XamarinSqliteCRUD\XamarinSqliteCRUD\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\EysanGuc\source\repos\XamarinSqliteCrud\XamarinSqliteCRUD\XamarinSqliteCRUD\obj\Debug\netstandard2.0\View\PersonelView.xaml.g.cs
+C:\Users\EysanGuc\source\repos\XamarinSqliteCrud\XamarinSqliteCRUD\XamarinSqliteCRUD\obj\Debug\netstandard2.0\View\TabbedPageView.xaml.g.cs

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Name="Departmentpage"
+             x:Class="XamarinSqliteCRUD.DepartmentView"
+             xmlns:viewModels="clr-namespace:XamarinSqliteCRUD.ViewModel;assembly=XamarinSqliteCRUD" Title="Department">
+    <StackLayout Spacing="20"
+                 Padding="20">
+        <Entry Text="{Binding DepartmentName}" 
+               Placeholder="Title" TextColor="Red" FontSize="23"></Entry>
+        <Button Text="Add Product"
+                TextColor="White"
+                BackgroundColor="DodgerBlue"
+                Command="{Binding Path = BindingContext.AddCommand
+                                    ,Source={x:Reference Departmentpage}}">
+        </Button>
+        <ListView ItemsSource="{Binding DepartmentList}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Id}" Detail="{Binding Name}">
+                        <TextCell.ContextActions>
+                            <MenuItem Text="Delete" Command="{Binding Path = BindingContext.DeleteCommand
+                                    ,Source={x:Reference Departmentpage}}" 
+                                          CommandParameter="{Binding .}"></MenuItem>
+                        </TextCell.ContextActions>
+                    </TextCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>
