@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Name="Departmentpage"
              x:Class="XamarinSqliteCRUD.DepartmentView"
-             xmlns:viewModels="clr-namespace:XamarinSqliteCRUD.ViewModel;assembly=XamarinSqliteCRUD" Title="Department">
+             xmlns:viewModels="clr-namespace:XamarinSqliteCRUD.ViewModel;assembly=XamarinSqliteCRUD" 
+             Title="Department">
     <StackLayout Spacing="20"
                  Padding="20">
         <Entry Text="{Binding DepartmentName}" 

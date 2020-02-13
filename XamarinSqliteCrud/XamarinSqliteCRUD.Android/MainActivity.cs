@@ -23,7 +23,7 @@ namespace XamarinSqliteCRUD.Droid
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             var dbPath = Path.Combine(System.Environment.GetFolderPath
                 (System.Environment.SpecialFolder.Personal), "Personel.db");
-            LoginRepository loginRepository = new LoginRepository();
+            LoginRepository loginRepository = new LoginRepository(dbPath);
             DepartmentRepository departmentRepository = new DepartmentRepository(dbPath);
             PersonelRepository personelRepository = new PersonelRepository(dbPath);
             var productRepository = new UnitOfWork(loginRepository,departmentRepository, dbPath,personelRepository);

@@ -15,6 +15,7 @@ namespace XamarinSqliteCRUD.ViewModel
         public PersonelViewModel(IUnitOfWork unitOfWork)
         {
             personelRepository = unitOfWork.PersonelRepository;
+            DepartmentList = personelRepository.GetDepartmentsListAsync();
         }
         public readonly IPersonelRepository personelRepository;
         public event PropertyChangedEventHandler PropertyChanged;
@@ -55,6 +56,18 @@ namespace XamarinSqliteCRUD.ViewModel
                 });
             }
         }
-        public IList<Department> DepartmentList { get { return personelRepository.GetDepartmentsListAsync(); } }
+        public IList<Department> departmentList;
+        public IList<Department> DepartmentList
+        {
+            get
+            {
+                return departmentList;
+            }
+            set
+            {
+                departmentList = value;
+                OnModelChanged();
+            }
+        }
     }
 }

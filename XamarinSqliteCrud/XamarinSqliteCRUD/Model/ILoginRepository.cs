@@ -9,6 +9,6 @@ namespace XamarinSqliteCRUD.Model
     public interface ILoginRepository
     {
         Task<Users> GetLoginByAsync(int id);
-        Task<bool> AddProductAsync(Users users);
+        Users GetUserControl(string user, string password);
     }
 }

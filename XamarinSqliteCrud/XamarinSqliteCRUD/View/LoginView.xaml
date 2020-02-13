@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinSqliteCRUD.View.LoginView"
+             xmlns:viewModels="clr-namespace:XamarinSqliteCRUD.ViewModel;assembly=XamarinSqliteCRUD" 
+             x:Name="LoginviewPage">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" HorizontalOptions="Center" Spacing="20" Padding="20" VerticalOptions="Center">
+            <Entry Text="{Binding LoginUser}" Placeholder="Password" PlaceholderColor="Aqua" 
+                   FontSize="23"></Entry>
+            <Entry Text="{Binding LoginPassword}" Placeholder="Password" PlaceholderColor="Aqua" 
+                   FontSize="23"></Entry>
+            <Button Text="Add" TextColor="Aqua" BackgroundColor="Black"
+                    Command="{Binding Path=BindingContext.LoginControl,
+                Source={x:Reference LoginviewPage}}"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

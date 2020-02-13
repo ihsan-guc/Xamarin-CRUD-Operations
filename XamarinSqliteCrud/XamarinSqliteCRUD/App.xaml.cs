@@ -13,7 +13,7 @@ namespace XamarinSqliteCRUD
         {
             InitializeComponent();
 
-            MainPage = new TabbedPageView(unitOfWork);
+            MainPage = new LoginView(unitOfWork);
         }
 
         protected override void OnStart()

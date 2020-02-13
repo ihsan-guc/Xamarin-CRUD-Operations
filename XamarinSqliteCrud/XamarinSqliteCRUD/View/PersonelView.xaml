@@ -1,23 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Name="Personelview"
-             xmlns:viewModels="clr-namespace:XamarinSqliteCRUD.ViewModel;assembly=XamarinSqliteCRUD" 
-             Title="Personel"
-    x:Class="XamarinSqliteCRUD.View.PersonelView">
-    <ContentPage.Resources>
-        <ResourceDictionary>
-            <Style TargetType="Entry">
-                <Setter Property="FontSize" Value="23"></Setter>
-            </Style>
-            <Style TargetType="Button">
-                <Setter Property="FontSize" Value="23"></Setter>
-            </Style>
-            <Style TargetType="DatePicker">
-                <Setter Property="FontSize" Value="23"></Setter>
-            </Style>
-        </ResourceDictionary>        
-    </ContentPage.Resources>
+             x:Name="PersonelPage"
+             x:Class="XamarinSqliteCRUD.View.PersonelView"
+             xmlns:viewModels="clr-namespace:XamarinSqliteCRUD.ViewModel;assembly=XamarinSqliteCRUD"
+             Title="Personel">
     <ContentPage.Content>
         <StackLayout Orientation="Vertical" Spacing="20" Padding="20">
             <Picker ItemsSource="{Binding DepartmentList}" 
@@ -31,7 +18,8 @@
                 TextColor="White"
                 BackgroundColor="DodgerBlue"
                 Command="{Binding Path = BindingContext.AddCommand
-                                    ,Source={x:Reference Personelview}}"></Button>
+                                    ,Source={x:Reference PersonelPage}}">
+            </Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
