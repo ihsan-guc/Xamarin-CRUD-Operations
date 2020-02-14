@@ -13,7 +13,7 @@ namespace XamarinSqliteCRUD
         {
             InitializeComponent();
 
-            MainPage = new LoginView(unitOfWork);
+            MainPage = new ImagesView();
         }
 
         protected override void OnStart()

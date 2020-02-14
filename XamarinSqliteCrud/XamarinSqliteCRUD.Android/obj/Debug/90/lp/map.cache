@@ -1,4 +1,7 @@
 FormsViewGroup
+Plugin.CurrentActivity
+Plugin.Media
+Plugin.Permissions
 SQLitePCLRaw.batteries_green
 SQLitePCLRaw.lib.e_sqlite3.android
 Xamarin.Android.Arch.Core.Common

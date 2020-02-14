@@ -2,10 +2,10 @@
 using Android.Content.PM;
 using Android.OS;
 using Android.Runtime;
+using Plugin.CurrentActivity;
 using SqliteOrnek2.DAL;
 using SqliteOrnek2.DAL.Repository;
 using System.IO;
-using XamarinSqliteCRUD.Model;
 
 namespace XamarinSqliteCRUD.Droid
 {
@@ -27,6 +27,7 @@ namespace XamarinSqliteCRUD.Droid
             DepartmentRepository departmentRepository = new DepartmentRepository(dbPath);
             PersonelRepository personelRepository = new PersonelRepository(dbPath);
             var productRepository = new UnitOfWork(loginRepository,departmentRepository, dbPath,personelRepository);
+            CrossCurrentActivity.Current.Init(this, savedInstanceState);
             LoadApplication(new App(productRepository));
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
