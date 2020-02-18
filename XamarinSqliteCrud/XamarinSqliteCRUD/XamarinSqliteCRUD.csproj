@@ -20,7 +20,16 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Validation\ValidasyonView.xaml.cs">
+      <DependentUpon>ValidasyonView.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
     <EmbeddedResource Update="DepartmentView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Validation\ValidasyonView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\ImagesView.xaml">

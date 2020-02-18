@@ -2,6 +2,7 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using XamarinSqliteCRUD.Model;
+using XamarinSqliteCRUD.Validation;
 using XamarinSqliteCRUD.View;
 using XamarinSqliteCRUD.ViewModel;
 
@@ -13,7 +14,7 @@ namespace XamarinSqliteCRUD
         {
             InitializeComponent();
 
-            MainPage = new ImagesView();
+            MainPage = new ValidasyonView();
         }
 
         protected override void OnStart()

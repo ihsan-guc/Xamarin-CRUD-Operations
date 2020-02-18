@@ -15,3 +15,4 @@ C:\Users\EysanGuc\source\repos\XamarinSqliteCrud\XamarinSqliteCRUD\XamarinSqlite
 C:\Users\EysanGuc\source\repos\XamarinSqliteCrud\XamarinSqliteCRUD\XamarinSqliteCRUD\obj\Debug\netstandard2.0\View\LoginView.xaml.g.cs
 C:\Users\EysanGuc\source\repos\XamarinSqliteCrud\XamarinSqliteCRUD\XamarinSqliteCRUD\obj\Debug\netstandard2.0\View\ImagesView.xaml.g.cs
 C:\Users\EysanGuc\source\repos\XamarinSqliteCrud\XamarinSqliteCRUD\XamarinSqliteCRUD\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\EysanGuc\source\repos\XamarinSqliteCrud\XamarinSqliteCRUD\XamarinSqliteCRUD\obj\Debug\netstandard2.0\Validation\ValidasyonView.xaml.g.cs
