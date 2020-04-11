@@ -10,6 +10,11 @@
                     <behiaviors:EmailValid></behiaviors:EmailValid>
                 </Entry.Behaviors>
             </Entry>
+            <Entry Placeholder="TCKN">
+                <Entry.Behaviors>
+                    <behiaviors:TCKNValid></behiaviors:TCKNValid>
+                </Entry.Behaviors>
+            </Entry>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
+﻿using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using System.Text;
 using System.Windows.Input;
 using Xamarin.Forms;
 using XamarinSqliteCRUD.Model;
@@ -13,18 +10,6 @@ namespace XamarinSqliteCRUD.ViewModel
 {
     public class DepartmentViewModel : INotifyPropertyChanged
     {
-        public IUnitOfWork unitOfWork;
-        public IUnitOfWork UnitOfWork
-        {
-            get
-            {
-                return unitOfWork;
-            }
-            set
-            {
-                unitOfWork = value;
-            }
-        }
         public DepartmentViewModel(IUnitOfWork unitOfWork)
         {
             departmentRepository = unitOfWork.DepartmentRepository;
@@ -60,6 +45,7 @@ namespace XamarinSqliteCRUD.ViewModel
                     {
                         Name = DepartmentName,
                     };
+                    //await UnitOfWork.DepartmentRepository.AddDepartmentAsync(department);
                     await departmentRepository.AddDepartmentAsync(department);
                     DepartmentList = await departmentRepository.GetDepartmentsListAsync();
                 });

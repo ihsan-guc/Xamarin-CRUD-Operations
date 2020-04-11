@@ -1,9 +1,5 @@
-﻿using System;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
+﻿using Xamarin.Forms;
 using XamarinSqliteCRUD.Model;
-using XamarinSqliteCRUD.Validation;
-using XamarinSqliteCRUD.View;
 using XamarinSqliteCRUD.ViewModel;
 
 namespace XamarinSqliteCRUD
@@ -14,7 +10,7 @@ namespace XamarinSqliteCRUD
         {
             InitializeComponent();
 
-            MainPage = new ValidasyonView();
+            MainPage = new DepartmentView() { BindingContext = new DepartmentViewModel(unitOfWork) } ;
         }
 
         protected override void OnStart()
